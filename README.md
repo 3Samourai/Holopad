@@ -10,6 +10,12 @@
 
 ### 🏠 [Homepage](https://github.com/3Samourai/Holopad)
 
+## Features 
+
+* Syntax highlighting
+* Multiple tabs
+
+
 ## Install
 
 ```sh
