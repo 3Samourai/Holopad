@@ -13,13 +13,13 @@
 ## Install
 
 ```sh
-npm i npm start
+npm i 
 ```
 
 ## Usage
 
 ```sh
-npm run start
+npm start
 ```
 
 ## Run tests
