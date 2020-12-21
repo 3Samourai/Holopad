@@ -1,0 +1,15 @@
+{
+  "name": "Holopad",
+  "version": "0.1.0",
+  "description": "A Modern Code Editor",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "03Samourai",
+  "license": "GPLv3",
+  "dependencies": {
+    "electron": "^11.0.4"
+  }
+}

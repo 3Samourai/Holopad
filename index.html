@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8"/>
+    <title>Holopad</title>
+<! --Code Mirror-- !>
+<script src="src/codemirror/codemirror.js"></script>
+<script src="src/codemirror/javascript.js"></script>
+<script src="src/codemirror/htmlmixed.js"></script>
+<script src="src/codemirror/css.js"></script>
+<script src="src/codemirror/xml.js"></script>
+<script src="src/codemirror/python.js"></script>
+<link rel="stylesheet" href="src/codemirror/codemirror.css">
+	
+<script src="src/jquery.js"></script>
+<link rel="stylesheet" href="src/photon/photon.css">
+</head>
+<body>
+	<div class="tab-group">
+  <div class="tab-item" id="1">
+    Tab
+  </div>
+  <div class="tab-item" id="2">
+    <span class="icon icon-cancel icon-close-tab"></span>
+    Tab
+  </div>
+  <div class="tab-item tab-item-fixed" id="plus">
+    <span class="icon icon-plus"></span>   
+  </div>
+</div>
+    <script>
+
+	    $('.col').hide();
+	    $('.tab-item').addClass('inactive');
+	    $('.tab-item:first').removeClass('inactive');
+	     $('.tab-item:first').addClass('active');
+	     var obj = {0: "error"};
+
+var editor = CodeMirror(document.body, {
+    mode: "javascript",
+    lineNumbers: true 
+    });
+   
+ editor.setSize(null,90+'%');
+ var extention = ".js";
+ function languageTool(value) {
+	 extention = value
+	 var select = $("#language");
+	 if (extention == ".html") {
+	  editor.setOption("mode", "htmlmixed");
+	 }
+	 else if (extention == ".js") {
+	 editor.setOption("mode", "javascript");
+	 }
+	 else if (extention == ".py") {
+	 editor.setOption("mode", "text/x-cython");
+	 }
+ }
+ 
+ function save(path) {
+	 var editorVal = editor.getValue();
+	 var data = {
+		 name: path + extention,
+		 code: editorVal
+	 };
+	 console.log(data);
+	 window.api.send("SaveCode", data);
+ };
+ window.api.receive("toSave", (data) => {
+	 save(data);
+	 });
+  window.api.receive("toOpen", (data) => {
+	 editor.getDoc().setValue(data.code);
+	  var extention2 = data.extension
+	  var select = $("#language");
+	 if (extention2 == ".html") {
+	  editor.setOption("mode", "htmlmixed");
+	  select.value = ".html";
+	 }
+	 else if (extention2 == ".js") {
+	 editor.setOption("mode", "javascript");
+	 select.value = ".js";
+
+	 }
+	 else if (extention2 == ".py") {
+	 editor.setOption("mode", "text/x-cython");
+	 select.value = ".py";
+	 }
+	 });
+	 
+/* Add Tabs */
+$('#plus').click(function(){
+    $('.tab-item').removeClass('active');
+       var randTabName = Math.floor((Math.random() * 1000) + 1);
+       var tabs = $(".tab-group");
+       var id = $(".tab-group").children().length;       
+$(".tab-group .tab-item:last").before("<div class=\"tab-item\" id="+id+"><span class=\"icon icon-cancel icon-close-tab\"></span>Tab</div>");
+setTimeout(function () {
+    $('#'+id).addClass('inactive');
+    $('#plus').removeClass('active');
+	$('#1').removeClass('inactive');
+    $('#1').addClass('active'); 
+    }, 100)
+   });
+/* Change Tabs */
+$(document).on("click", ".tab-item:not(#plus)", function(){
+  var t = $(this).attr('id');
+  var r = $('.tab-item.active').attr('id');
+obj[r] = editor.getValue()
+  if($(this).hasClass('inactive')){
+    $('.tab-item').addClass('inactive');  
+    $('.tab-item').removeClass('active');
+    $(this).removeClass('inactive');
+    $(this).addClass('active');    
+    if (obj[t] == undefined)
+{
+	editor.getDoc().setValue("");
+}
+else if(obj[t] != undefined){
+	var doc = obj[t];
+	editor.getDoc().setValue(doc);
+}
+
+ }
+});
+
+$(document).on("click", ".icon.icon-cancel.icon-close-tab", function(){
+	var del = $(this).closest("div").prop("id");
+	if($("#"+del).hasClass('active')){
+		    $("#1").addClass('active');    
+  editor.getDoc().setValue(obj[1]);
+
+		}
+	$("#"+del).remove()
+	delete obj[del];
+});
+
+  </script>
+    <footer class="toolbar toolbar-footer">
+  <div class="toolbar-actions">
+  <select id="language" onChange="languageTool(this.value);">
+    <option value=".js">JavaScript</option>
+    <option value=".html">HTML</option>
+    <option value=".py">Python</option>
+</select>
+
+
+    <button class="btn btn-primary pull-right">
+      test
+    </button>
+  </div>
+</footer>
+</body>
