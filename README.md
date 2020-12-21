@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> A Modern Code Editor
+> A Modern Code Editor build with ElectronJS
 
 ### 🏠 [Homepage](https://github.com/3Samourai/Holopad)
 
