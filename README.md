@@ -13,6 +13,7 @@
 ## Install
 
 ```sh
+git clone https://github.com/3Samourai/Holopad.git
 npm i 
 ```
 
