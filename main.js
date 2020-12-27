@@ -53,11 +53,10 @@ async function createWindow() {
     ];
     Menu.setApplicationMenu(Menu.buildFromTemplate(template));
       win.loadFile(path.join(__dirname, "index.html"));
-win.webContents.openDevTools()
+//win.webContents.openDevTools()
 win.webContents.on('did-finish-load', function() {
    console.log("loaded");
 });
-  // rest of code..
 }
 
 app.setAboutPanelOptions({
