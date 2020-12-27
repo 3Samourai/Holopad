@@ -61,7 +61,7 @@ win.webContents.on('did-finish-load', function() {
 
 app.setAboutPanelOptions({
     applicationName: "Holopad", 
-    applicationVersion: "0.1 Beta",
+    applicationVersion: "0.1.1 Beta",
     credits: "3Samourai",
     copyright: "GPLv3"
   });
