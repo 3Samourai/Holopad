@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+## Welcome to Holopad
+Holopad is a Open Source Code Editor
 
-You can use the [editor on GitHub](https://github.com/3Samourai/Holopad/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+## Features 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+* Syntax highlighting
+* Multiple tabs
 
-### Markdown
+## Example
+![Demo Holopad](https://raw.githubusercontent.com/3Samourai/Holopad/main/src/HolopadGif.gif)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Road Map
 
-```markdown
-Syntax highlighted code block
+* Add Extension
+* Add Code Suggestion
 
-# Header 1
-## Header 2
-### Header 3
+## Install
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```sh
+git clone https://github.com/3Samourai/Holopad.git
+cd Holopad
+npm i 
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Usage
 
-### Jekyll Themes
+```sh
+npm start
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/3Samourai/Holopad/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Run tests
 
-### Support or Contact
+```sh
+npm run test
+```
+### License 
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+GPLv3
+
+## Author
+
+👤 **3Samourai**
+
