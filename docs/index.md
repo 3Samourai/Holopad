@@ -37,8 +37,3 @@ npm run test
 ### License 
 
 GPLv3
-
-## Author
-
-👤 **3Samourai**
-
