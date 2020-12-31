@@ -36,4 +36,4 @@ npm run test
 ```
 ### License 
 
-GPLv3
+[GPLv3](https://github.com/3Samourai/Holopad/blob/main/LICENSE)
