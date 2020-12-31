@@ -1,3 +1,7 @@
+<head>
+  <meta name="google-site-verification" content="1u_g1cG-B9VNASDMyJC4fxvvacjHmabK_TaCzDFydlw" />
+ </head>
+ 
 ## Welcome to Holopad
 Holopad is a Open Source Code Editor
 
