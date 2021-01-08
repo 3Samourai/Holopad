@@ -7,7 +7,7 @@
 -->
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://via.placeholder.com/200x200.png?text=LOGO" alt="Project logo"></a>
+ <img width=200px height=200px src="https://raw.githubusercontent.com/3Samourai/Holopad/main/docs/edit.svg" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Holopad</h3>
@@ -70,7 +70,10 @@ A step by step guide that tell you how to Install Holopad.
 
 
 ```
-git clone https://github.com/3Samourai/Holopad.git cd Holopad npm i 
+git clone https://github.com/3Samourai/Holopad.git 
+cd Holopad 
+npm i 
+npm start
 ```
 
 ## 🔧 Running the tests <a name = "tests"></a>
@@ -82,7 +85,7 @@ npm run test
 
 ## 🎈 Usage and Example <a name="usage"></a>
 TODO - Add GIF Example
- <img width=200px height=200px src="https://via.placeholder.com/800x440.png?text=GIF" alt="GIF Example"></a>
+ <img src="https://raw.githubusercontent.com/3Samourai/Holopad/main/src/HolopadGif.gif" alt="GIF Example"></a>
  
 ## 🚀 Deployment <a name = "deployment"></a>
 TODO - Add additional notes about how to deploy Holopad on a live system.
