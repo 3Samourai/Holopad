@@ -84,7 +84,6 @@ npm run test
 ```
 
 ## 🎈 Usage and Example <a name="usage"></a>
-TODO - Add GIF Example
  <img src="https://raw.githubusercontent.com/3Samourai/Holopad/main/src/HolopadGif.gif" alt="GIF Example"></a>
  
 ## 🚀 Deployment <a name = "deployment"></a>
