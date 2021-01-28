@@ -10,6 +10,6 @@
   "author": "03Samourai",
   "license": "GPLv3",
   "dependencies": {
-    "electron": "^11.0.4"
+    "electron": "^11.1.0"
   }
 }
