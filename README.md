@@ -43,10 +43,8 @@
     </li>
      <li><a href="#tests">Running the tests</a></li>
     <li><a href="#usage">Usage and Example</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#built_using">Built Using</a></li>
     <li><a href="#authors">Authors</a></li>
-    <li><a href="#acknowledgement">Acknowledgement</a></li>
     <li><a href="#license">License</a></li>
 
   </ol>
@@ -86,11 +84,6 @@ npm run test
 ## 🎈 Usage and Example <a name="usage"></a>
  <img src="https://raw.githubusercontent.com/3Samourai/Holopad/main/src/HolopadGif.gif" alt="GIF Example"></a>
  
-## 🚀 Deployment <a name = "deployment"></a>
-TODO - Add additional notes about how to deploy Holopad on a live system.
-
-## 🗺 RoadMap <a name = "roadmap"></a>
-TODO - Add RoadMap
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 - [SimplyREADME](https://github.com/3Samourai/simply-readme) - README Generator
@@ -101,8 +94,6 @@ TODO - Add RoadMap
 
 See also the list of [contributors](https://github.com/https://github.com/3Samourai/Holopad/contributors) who participated in this project.
 
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-TODO -  Add Inspiration and References
 
 ## 🎉 License <a name = "license"></a>
 GNU General Public License v3.0
